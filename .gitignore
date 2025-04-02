@@ -1,3 +1,109 @@
-node_modules
-.env
+# Ignore Spring Tool Suite and Eclipse IDE metadata
+.metadata/
+.project
+.classpath
+.settings/
+.springBeans
+
+# Ignore build files and IDE-specific files
+target/
+bin/
+build/
+.idea/
+*.iml
+
+# Ignore OS-specific files
 .DS_Store
+Thumbs.db
+
+# Ignore temporary and swap files
+*.swp
+*.tmp
+*.bak
+*~
+
+# Ignore all .log files
+*.log
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore environment files
+.env
+
+# Ignore Spring Tool Suite and Eclipse IDE metadata
+.metadata/
+.project
+.classpath
+.settings/
+.springBeans
+
+# Ignore build files and IDE-specific files
+target/
+bin/
+build/
+.idea/
+*.iml
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary and swap files
+*.swp
+*.tmp
+*.bak
+*~
+
+# Eclipse/STS/IntelliJ IDE metadata
+.vscode/               # VS Code settings
+*.launch               # Launch configurations
+*.ipr                  # IntelliJ project files
+*.iws                  # IntelliJ workspace files
+*.dbeaver/             # DBeaver settings
+*.factorypath          # Eclipse plugin metadata
+.mvn/                  # Maven wrapper files
+
+# Java-related
+*.jar                  # Java archives
+*.war                  # Web archives
+*.ear                  # Enterprise archives
+*.javadoc              # Java documentation
+*.class                # Compiled Java classes
+*.aj                  # AspectJ files
+
+# Gradle
+.gradle/               # Gradle cache
+build/                 # Gradle build output
+!gradle-wrapper.jar    # Include wrapper jar
+
+# Maven
+target/                # Maven build output
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Logs and Reports
+*.log                  # Log files
+*.out                  # Output logs
+*.report               # Report files
+*.bak                  # Backup files
+*.tmp                  # Temporary files
+hs_err_pid*            # Java crash logs
+
+# System and Editor Files
+*.swp                  # Swap files
+*.swo                  # Swap files
+*.orig                 # Merge conflict backup
+.idea/                 # IntelliJ project settings
+*.iml                  # IntelliJ module files
+
+# macOS specific
+.AppleDouble
+.LSOverride
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
