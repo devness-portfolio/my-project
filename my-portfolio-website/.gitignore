@@ -1,0 +1,26 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore node modules (if using Node.js or any tools that install npm packages)
+node_modules/
+
+# Ignore build artifacts (if any)
+dist/
+build/
+
+# Ignore log files
+*.log
+
+# Ignore environment config files
+.env
+
+# Ignore temporary files from editors or OS
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*~
+
+# Ignore VS Code settings (optional, if you don’t want to share workspace settings)
+.vscode/
