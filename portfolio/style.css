@@ -1,0 +1,609 @@
+/* --- Base Styles & Variables --- */
+:root {
+  --bg-color-light: #f8f9fa;
+  --text-color-light: #212529;
+  --primary-color-light: #007bff;
+  --secondary-color-light: #6c757d;
+  --card-bg-light: #ffffff;
+  --border-color-light: #dee2e6;
+  --link-hover-light: #0056b3;
+  --nav-bg-light: rgba(255, 255, 255, 0.9);
+  --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+  --switch-bg-light: #ccc;
+  --switch-slider-light: #fff;
+  --switch-icon-color-light: #f0ad4e; /* Sun color */
+
+  --bg-color-dark: #1a1a1a; /* Slightly lighter than pure black */
+  --text-color-dark: #e9ecef;
+  --primary-color-dark: #64ffda; /* A common techy accent */
+  --secondary-color-dark: #adb5bd;
+  --card-bg-dark: #2c2c2c;
+  --border-color-dark: #444;
+  --link-hover-dark: #8afff7;
+  --nav-bg-dark: rgba(44, 44, 44, 0.9);
+  --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --switch-bg-dark: #555;
+  --switch-slider-dark: #ccc;
+  --switch-icon-color-dark: #5bc0de; /* Moon/cool color */
+
+  /* Default to light mode */
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
+  --card-bg: var(--card-bg-light);
+  --border-color: var(--border-color-light);
+  --link-hover: var(--link-hover-light);
+  --nav-bg: var(--nav-bg-light);
+  --shadow: var(--shadow-light);
+  --switch-bg: var(--switch-bg-light);
+  --switch-slider: var(--switch-slider-light);
+  --switch-icon-color: var(--switch-icon-color-light);
+
+  --transition-speed: 0.3s;
+}
+
+body.dark-mode {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --primary-color: var(--primary-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --card-bg: var(--card-bg-dark);
+  --border-color: var(--border-color-dark);
+  --link-hover: var(--link-hover-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --shadow: var(--shadow-dark);
+  --switch-bg: var(--switch-bg-dark);
+  --switch-slider: var(--switch-slider-dark);
+  --switch-icon-color: var(--switch-icon-color-dark);
+}
+
+/* General Reset & Body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on header height */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  line-height: 1.7;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+/* --- Layout & Sections --- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 100px; /* Space below fixed header */
+}
+
+.content-section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color var(--transition-speed) ease;
+}
+.content-section:last-of-type {
+  border-bottom: none;
+}
+
+.content-section h2 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+  transition: color var(--transition-speed) ease;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Header & Navigation --- */
+
+/* Responsive profile picture */
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.headshot {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 600px) {
+  .headshot {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Pushes nav and switch apart */
+  align-items: center;
+  padding: 10px 30px;
+  transition: background-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Space between nav items */
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color var(--transition-speed) ease;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  transition: width 0.3s ease-in-out,
+    background-color var(--transition-speed) ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--primary-color);
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+  width: 100%;
+}
+
+/* --- Theme Switch --- */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Width of the switch */
+  height: 34px; /* Height of the switch */
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-bg);
+  transition: var(--transition-speed);
+  border-radius: 34px;
+  display: flex; /* To position icons */
+  align-items: center; /* Center icons vertically */
+  justify-content: space-between; /* Space out icons */
+  padding: 0 5px; /* Padding for icons */
+}
+
+.slider:before {
+  /* The actual switch handle */
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--switch-slider);
+  transition: var(--transition-speed);
+  border-radius: 50%;
+  z-index: 2; /* Above icons */
+}
+
+input:checked + .slider {
+  background-color: var(--switch-bg); /* Stays same color, just moves handle */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Moves handle to the right */
+}
+
+/* Switch Icons */
+.slider .icon {
+  font-size: 16px;
+  color: var(--switch-icon-color);
+  transition: opacity 0.2s ease;
+  z-index: 1; /* Below handle */
+}
+.slider .sun {
+  opacity: 1;
+}
+.slider .moon {
+  opacity: 0;
+}
+
+input:checked + .slider .sun {
+  opacity: 0;
+}
+input:checked + .slider .moon {
+  opacity: 1;
+}
+
+/* --- Specific Section Styling --- */
+
+/* About */
+#about p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+#about strong {
+  font-size: 1.3em;
+  display: block;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow var(--transition-speed) ease,
+    background-color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Consistent shadow intensity on hover */
+}
+
+.project-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  transition: color var(--transition-speed) ease;
+}
+
+.project-card p {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  transition: color var(--transition-speed) ease;
+  min-height: 60px; /* Give some space for description */
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--bg-color); /* Text color contrasts with button bg */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease, transform 0.2s ease;
+  border: 1px solid var(--primary-color); /* Added border */
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--link-hover);
+  border-color: var(--link-hover);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+.btn i {
+  /* Icon margin */
+  margin-left: 8px;
+}
+.btn-download i {
+  margin-right: 8px; /* Icon before text */
+  margin-left: 0;
+}
+
+/* Optional Secondary Button Style */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  margin-left: 10px; /* Space it from the primary button */
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+/* Experience */
+.experience-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--border-color);
+}
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 40px; /* More space before download button */
+}
+
+.experience-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  transition: color var(--transition-speed) ease;
+}
+
+.experience-dates {
+  font-style: italic;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  transition: color var(--transition-speed) ease;
+}
+
+.experience-item ul {
+  list-style-position: outside;
+  margin-left: 20px;
+}
+.experience-item li {
+  margin-bottom: 8px;
+}
+
+/* Photography Carousel */
+.carousel-container {
+  position: relative;
+  max-width: 700px; /* Adjust as needed */
+  margin: 20px auto;
+  overflow: hidden; /* Hide parts of images during slide */
+  border-radius: 8px;
+  background-color: var(--card-bg); /* Match card background */
+  box-shadow: var(--shadow);
+}
+
+.carousel-slide {
+  display: flex; /* Needed for potential future multi-image slides */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block; /* Remove extra space below image */
+  object-fit: cover; /* Cover the container, might crop */
+  min-height: 400px; /* Example height */
+  max-height: 500px; /* Example max height */
+  background-color: var(--border-color); /* Placeholder bg */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact */
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-details li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  display: flex; /* Align icon and text */
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+.contact-details i {
+  color: var(--primary-color);
+  width: 20px; /* Fixed width for alignment */
+  text-align: center;
+}
+.contact-details a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+.contact-details a:hover,
+.contact-details a:focus {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-color);
+  color: var(--secondary-color);
+  font-size: 0.9em;
+  transition: border-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+.small-note {
+  font-size: 0.85em;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 60px; /* Adjust for smaller header */
+  }
+
+  body {
+    font-size: 15px; /* Slightly smaller base font */
+  }
+
+  main {
+    padding-top: 80px; /* Adjust if header wraps */
+  }
+
+  .site-header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main-nav {
+    width: 100%;
+    order: 2; /* Nav below switch */
+    margin-top: 10px;
+  }
+
+  .main-nav ul {
+    justify-content: center; /* Center nav items */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 15px; /* Reduced gap */
+  }
+
+  .theme-switch-wrapper {
+    order: 1; /* Switch above nav */
+    margin-bottom: 10px; /* Space below switch */
+  }
+
+  .content-section h2 {
+    font-size: 2em;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack projects */
+  }
+
+  .carousel-button {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+  .carousel-dots {
+    bottom: 10px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .main-nav ul {
+    gap: 10px; /* Further reduce gap */
+  }
+  .main-nav a {
+    font-size: 0.9em;
+  }
+
+  .content-section h2 {
+    font-size: 1.8em;
+  }
+  .contact-details li {
+    font-size: 1em;
+  }
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+}
