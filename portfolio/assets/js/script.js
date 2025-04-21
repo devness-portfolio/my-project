@@ -1,3 +1,12 @@
+// Original Script for Devness Portfolio.
+// Split into multiple files for better organization and maintainability.
+// File: assets/js/script.js
+// This script combines theme switching, smooth scrolling,
+// photography carousel, and footer year update functionalities.
+// Import necessary modules
+// No imports needed as this is a single script file
+// Ensure the DOM is fully loaded before executing scripts
+
 document.addEventListener("DOMContentLoaded", () => {
   // --- Theme Switch ---
   const themeToggle = document.getElementById("checkbox");
@@ -36,11 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Photography Carousel ---
   const imageUrls = [
-    // IMPORTANT: Replace these with your ACTUAL public S3 image URLs
-    "https://your-s3-bucket-name.s3.amazonaws.com/images/photo1.jpg",
-    "https://your-s3-bucket-name.s3.amazonaws.com/images/photo2.jpg",
-    "https://your-s3-bucket-name.s3.amazonaws.com/images/photo3.jpg",
-    "https://your-s3-bucket-name.s3.amazonaws.com/images/photo4.jpg",
+    // IMPORTANT: public S3 image URLs
+    "https://devness-portfolio.s3.us-east-1.amazonaws.com/images/IMG_8788.JPG",
+    "https://devness-portfolio.s3.us-east-1.amazonaws.com/images/IMG_8790.JPG",
+    "https://devness-portfolio.s3.us-east-1.amazonaws.com/images/IMG_8791.JPG",
+    "https://devness-portfolio.s3.us-east-1.amazonaws.com/images/IMG_8792.JPG",
+    "https://devness-portfolio.s3.us-east-1.amazonaws.com/images/IMG_8793.JPG",
+    "https://devness-portfolio.s3.us-east-1.amazonaws.com/images/IMG_8794.JPG",
+    "https://devness-portfolio.s3.us-east-1.amazonaws.com/images/IMG_8795.JPG",
     // Add more image URLs here
   ];
 
