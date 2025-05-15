@@ -10,24 +10,23 @@ The project is organized as follows:
 
 privacy.html
 terms.html
-README.md
 .vscode/
-settings.json
+    settings.json
 assets/
-css/
-style.css
-files/
-html/
-about.html
-booking.html
-contact.html
-gallery.html
-index.html
-reviews.html
-services.html
-images/
-js/
-script.js
+    css/
+        style.css
+    files/
+    html/
+        about.html
+        booking.html
+        contact.html
+        gallery.html
+        index.html
+        reviews.html
+        services.html
+    images/
+    js/
+        script.js
 
 ### File Descriptions
 
