@@ -1,0 +1,349 @@
+<!--(Customer Reviews)-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Customer Reviews | Your Barbershop Name - Kenner, LA Barbers</title>
+    <meta
+      name="description"
+      content="Read customer reviews and testimonials for Your Barbershop Name in Kenner. See why clients from New Orleans and Metairie choose us for their haircuts and grooming."
+    />
+    <meta
+      name="keywords"
+      content="barbershop reviews Kenner, best barber New Orleans reviews, Metairie barber testimonials, customer feedback barbershop LA"
+    />
+
+    <meta
+      property="og:title"
+      content="Customer Reviews - Your Barbershop Name"
+    />
+    <meta
+      property="og:description"
+      content="See what our clients say about their experience."
+    />
+    <meta
+      property="og:image"
+      content="https://yourbarbershop.com/images/og-reviews.jpg"
+    />
+    <!-- Replace -->
+    <meta property="og:url" content="https://yourbarbershop.com/reviews.html" />
+    <!-- Replace -->
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Schema.org for the business with AggregateRating -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Your Barbershop Name",
+        // ... (rest of your BarberShop schema details as in index.html)
+        "aggregateRating": {
+          // Update this based on your actual average reviews
+          "@type": "AggregateRating",
+          "ratingValue": "4.8", // Example rating
+          "reviewCount": "150" // Example review count
+        },
+        "review": [
+          // Add a few key reviews here
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Michael B." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Best barber in Kenner! Always a great cut and friendly service. Highly recommend for anyone in the New Orleans area.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Your Barbershop Name"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "David S. - Metairie" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Took my son here for his first real barbershop experience. They were fantastic with him. Great atmosphere and skills.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Your Barbershop Name"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">Your Barbershop Name</a>
+        <nav class="main-nav">
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html" class="active">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html" class="cta-button-nav">Book Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="page-header-section"
+        style="
+          background-image: url('https://via.placeholder.com/1920x400.png?text=Client+Testimonials');
+        "
+      >
+        <div class="container">
+          <h1>What Our Clients Say</h1>
+          <p>
+            Hear from satisfied customers from Kenner, Metairie, New Orleans,
+            and beyond.
+          </p>
+        </div>
+      </section>
+
+      <section class="reviews-content-section">
+        <div class="container">
+          <h2>Real Feedback, Real Styles</h2>
+
+          <!-- Option 1: Embed Google/Yelp Reviews (Recommended for SEO) -->
+          <div class="embedded-reviews">
+            <h3>See Our Google Reviews</h3>
+            <p>
+              We're proud of our reputation in the Kenner and New Orleans metro
+              area. Check out our latest reviews on Google!
+            </p>
+            <!-- 
+                        To embed Google Reviews:
+                        1. Go to your Google Business Profile.
+                        2. Find a review or your review summary. Often there isn't a direct "embed all reviews" widget.
+                        3. Alternative: Use a third-party service like Elfsight, Tagembed, or similar to create a review widget.
+                        4. Or, provide a prominent link to your Google Reviews page.
+                        Example Link:
+                    -->
+            <a
+              href="YOUR_GOOGLE_REVIEWS_LINK_HERE"
+              target="_blank"
+              class="cta-button"
+              style="background-color: #4285f4; margin-bottom: 2rem"
+              >View on Google <i class="fab fa-google"></i
+            ></a>
+
+            <!-- Example: Placeholder for a third-party review widget -->
+            <!-- <div id="google-reviews-widget">Your Google Reviews Widget Code Here</div> -->
+          </div>
+
+          <h3 class="manual-reviews-title">Featured Testimonials</h3>
+          <div class="testimonial-grid">
+            <article
+              class="testimonial-card"
+              itemprop="review"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div
+                itemprop="reviewRating"
+                itemscope
+                itemtype="https://schema.org/Rating"
+              >
+                <meta itemprop="ratingValue" content="5" />
+                <p class="stars">★★★★★</p>
+              </div>
+              <blockquote itemprop="reviewBody">
+                "Absolutely the best barbershop in Kenner! I've been coming to
+                [Barber Name] for years. Consistent quality and a great
+                atmosphere. Worth the drive from New Orleans."
+              </blockquote>
+              <footer
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+              >
+                <cite>- <span itemprop="name">John D.</span>, Kenner, LA</cite>
+              </footer>
+            </article>
+
+            <article
+              class="testimonial-card"
+              itemprop="review"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div
+                itemprop="reviewRating"
+                itemscope
+                itemtype="https://schema.org/Rating"
+              >
+                <meta itemprop="ratingValue" content="5" />
+                <p class="stars">★★★★★</p>
+              </div>
+              <blockquote itemprop="reviewBody">
+                "I'm very particular about my fades, and these guys nail it
+                every time. Clean shop, professional barbers. Highly recommend
+                if you're in Metairie or nearby."
+              </blockquote>
+              <footer
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+              >
+                <cite
+                  >- <span itemprop="name">Marcus P.</span>, Metairie, LA</cite
+                >
+              </footer>
+            </article>
+
+            <article
+              class="testimonial-card"
+              itemprop="review"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <div
+                itemprop="reviewRating"
+                itemscope
+                itemtype="https://schema.org/Rating"
+              >
+                <meta itemprop="ratingValue" content="4" />
+                <!-- Example of a 4-star -->
+                <p class="stars">★★★★☆</p>
+              </div>
+              <blockquote itemprop="reviewBody">
+                "Good haircut and friendly service. Sometimes there's a bit of a
+                wait even with an appointment, but the quality is worth it. One
+                of the solid choices for a barber in the New Orleans area."
+              </blockquote>
+              <footer
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person"
+              >
+                <cite
+                  >- <span itemprop="name">Sarah K.</span>, New Orleans,
+                  LA</cite
+                >
+              </footer>
+            </article>
+            <!-- Add more testimonials -->
+          </div>
+
+          <div class="leave-review-cta">
+            <h3>Love Your Look?</h3>
+            <p>
+              We'd love to hear about your experience at Your Barbershop Name!
+              Leave us a review on Google or Yelp.
+            </p>
+            <a
+              href="YOUR_GOOGLE_REVIEW_LINK_HERE"
+              target="_blank"
+              class="cta-button"
+              style="background-color: #4285f4; margin-right: 10px"
+              >Review on Google</a
+            >
+            <a
+              href="YOUR_YELP_REVIEW_LINK_HERE"
+              target="_blank"
+              class="cta-button"
+              style="background-color: #d32323"
+              >Review on Yelp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Same footer as index.html -->
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>Your Barbershop Name</h3>
+            <p>123 Main Street, Kenner, LA 70062</p>
+            <p>Phone: <a href="tel:+15045551234">(504) 555-1234</a></p>
+            <p>
+              Email:
+              <a href="mailto:contact@yourbarbershop.com"
+                >contact@yourbarbershop.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact & Directions</a></li>
+              <li><a href="booking.html">Book Appointment</a></li>
+            </ul>
+          </div>
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a
+              href="https://facebook.com/yourbarbershop"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://instagram.com/yourbarbershop"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://twitter.com/yourbarbershop"
+              target="_blank"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-map">
+          <h3>Find Us in Kenner</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.301188373415!2d-90.2435!3d29.9929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620b707679ce6df%3A0x1234567890abcdef!2sYour+Barbershop+Location+Here!5e0!3m2!1sen!2sus!4v1234567890123"
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map of Your Barbershop Name in Kenner LA"
+          ></iframe>
+          <p class="map-caption">
+            Conveniently located for clients from Kenner, Metairie, and the
+            greater New Orleans area.
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span> Los Latinos Barbershop. All Rights
+            Reserved. | Serving New Orleans, Kenner, Metairie.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

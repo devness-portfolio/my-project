@@ -1,0 +1,326 @@
+<!--(Contact Page)-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Contact Us | Your Barbershop Name - Kenner, Metairie, New Orleans
+    </title>
+    <meta
+      name="description"
+      content="Contact Your Barbershop Name in Kenner, LA. Find our address, phone number, map, and opening hours. We serve clients from Kenner, Metairie, and New Orleans."
+    />
+    <meta
+      name="keywords"
+      content="contact barbershop Kenner, Kenner barber address, Metairie barber phone, New Orleans barber map, barbershop hours Kenner"
+    />
+
+    <meta property="og:title" content="Contact Us - Your Barbershop Name" />
+    <meta
+      property="og:description"
+      content="Get in touch or find our Kenner barbershop."
+    />
+    <meta
+      property="og:image"
+      content="https://yourbarbershop.com/images/og-contact.jpg"
+    />
+    <!-- Replace -->
+    <meta property="og:url" content="https://yourbarbershop.com/contact.html" />
+    <!-- Replace -->
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Schema.org for the business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarberShop", // Or ContactPage if you want to be specific, but BarberShop includes contact info
+        "name": "Your Barbershop Name",
+        "image": "https://yourbarbershop.com/images/logo.png",
+        "url": "https://yourbarbershop.com/contact.html", // URL of this specific contact page
+        "telephone": "+1-504-555-1234",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Main Street",
+          "addressLocality": "Kenner",
+          "addressRegion": "LA",
+          "postalCode": "70062",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 29.9929,
+          "longitude": -90.2413
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "16:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "00:00", // Or specify if closed
+            "closes": "00:00" // Indicates closed
+          }
+        ],
+        "areaServed": ["New Orleans", "Kenner", "Metairie"],
+        "sameAs": [
+          "https://www.facebook.com/yourbarbershop",
+          "https://www.instagram.com/yourbarbershop"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">Your Barbershop Name</a>
+        <nav class="main-nav">
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="booking.html" class="cta-button-nav">Book Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="page-header-section"
+        style="
+          background-image: url('https://via.placeholder.com/1920x400.png?text=Get+In+Touch');
+        "
+      >
+        <div class="container">
+          <h1>Contact Us & Visit Our Kenner Shop</h1>
+          <p>We're here to help. Find our details or send us a message.</p>
+        </div>
+      </section>
+
+      <section class="contact-details-section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info-block">
+              <h2>Get in Touch</h2>
+              <p>
+                We're conveniently located in Kenner, easily accessible from
+                Metairie and New Orleans. Reach out to us with any questions or
+                to book an appointment.
+              </p>
+              <ul>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> <strong>Address:</strong
+                  ><br />
+                  <span itemprop="streetAddress">123 Main Street</span><br />
+                  <span itemprop="addressLocality">Kenner</span>,
+                  <span itemprop="addressRegion">LA</span>
+                  <span itemprop="postalCode">70062</span>
+                </li>
+                <li>
+                  <i class="fas fa-phone"></i> <strong>Phone:</strong>
+                  <a href="tel:+15045551234" itemprop="telephone"
+                    >(504) 555-1234</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-envelope"></i> <strong>Email:</strong>
+                  <a href="mailto:contact@yourbarbershop.com" itemprop="email"
+                    >contact@yourbarbershop.com</a
+                  >
+                </li>
+              </ul>
+              <h3>Opening Hours:</h3>
+              <ul class="opening-hours-list">
+                <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                <li>Saturday: 10:00 AM - 4:00 PM</li>
+                <li>Sunday: Closed</li>
+              </ul>
+              <div class="contact-social-links">
+                <h3>Follow Us:</h3>
+                <a
+                  href="https://facebook.com/yourbarbershop"
+                  target="_blank"
+                  aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://instagram.com/yourbarbershop"
+                  target="_blank"
+                  aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://twitter.com/yourbarbershop"
+                  target="_blank"
+                  aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="contact-form-block">
+              <h2>Send Us a Message</h2>
+              <p>
+                Have a question? Fill out the form below and we'll get back to
+                you as soon as possible.
+              </p>
+              <!-- For a functional form, you'll need backend processing or a service like Formspree.io / Netlify Forms -->
+              <form
+                action="YOUR_FORM_SUBMISSION_URL_OR_SERVICE"
+                method="POST"
+                class="contact-form"
+              >
+                <div class="form-group">
+                  <label for="name">Full Name:</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number (Optional):</label>
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject:</label>
+                  <input type="text" id="subject" name="subject" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section-contact-page">
+        <div class="container">
+          <h2>Find Our Kenner Barbershop</h2>
+          <p>
+            Serving clients from across the New Orleans metropolitan area,
+            including Metairie.
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.301188373415!2d-90.2435!3d29.9929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620b707679ce6df%3A0x1234567890abcdef!2sYour+Barbershop+Location+Here!5e0!3m2!1sen!2sus!4v1234567890123"
+            width="100%"
+            height="450"
+            style="border: 0; border-radius: var(--border-radius)"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map of Your Barbershop Name in Kenner LA"
+          >
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Same footer as index.html -->
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>Your Barbershop Name</h3>
+            <p>123 Main Street, Kenner, LA 70062</p>
+            <p>Phone: <a href="tel:+15045551234">(504) 555-1234</a></p>
+            <p>
+              Email:
+              <a href="mailto:contact@yourbarbershop.com"
+                >contact@yourbarbershop.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact & Directions</a></li>
+              <li><a href="booking.html">Book Appointment</a></li>
+            </ul>
+          </div>
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a
+              href="https://facebook.com/yourbarbershop"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://instagram.com/yourbarbershop"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://twitter.com/yourbarbershop"
+              target="_blank"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-map" style="display: none">
+          <!-- Hide footer map if we have a big one on contact page -->
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span> Your Barbershop Name. All Rights
+            Reserved. | Serving New Orleans, Kenner, Metairie.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

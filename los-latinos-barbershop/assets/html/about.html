@@ -1,0 +1,314 @@
+<!-- (About Us/Bio Page)-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      About Us - Our Barbers & Story | Your Barbershop Name - Kenner, LA
+    </title>
+    <meta
+      name="description"
+      content="Meet the expert barbers at Your Barbershop Name in Kenner. Learn about our passion for quality grooming and our commitment to serving the New Orleans and Metairie communities."
+    />
+    <meta
+      name="keywords"
+      content="Kenner barbers, Metairie barbers, New Orleans barbers, barber bios, barbershop story Kenner, expert barbers Louisiana"
+    />
+    <meta name="author" content="Your Barbershop Name" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Us - Your Barbershop Name" />
+    <meta
+      property="og:description"
+      content="Meet our skilled barbers and learn our story."
+    />
+    <meta
+      property="og:image"
+      content="https://yourbarbershop.com/images/og-about.jpg"
+    />
+    <!-- Replace -->
+    <meta property="og:url" content="https://yourbarbershop.com/about.html" />
+    <!-- Replace -->
+    <meta property="og:type" content="profile" />
+    <!-- 'profile' for an about us page -->
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Schema.org for the business (can be repeated on all pages) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Your Barbershop Name",
+        "image": "https://yourbarbershop.com/images/logo.png",
+        "url": "https://yourbarbershop.com",
+        "telephone": "+1-504-555-1234",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Main Street",
+          "addressLocality": "Kenner",
+          "addressRegion": "LA",
+          "postalCode": "70062",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 29.9929,
+          "longitude": -90.2413
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "16:00"
+          }
+        ],
+        "areaServed": ["New Orleans", "Kenner", "Metairie"],
+        "sameAs": [
+          "https://www.facebook.com/yourbarbershop",
+          "https://www.instagram.com/yourbarbershop"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">Los Latinos Barbershop</a>
+        <nav class="main-nav">
+          <button
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html" class="cta-button-nav">Book Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="page-header-section"
+        style="
+          background-image: url('https://via.placeholder.com/1920x400.png?text=Our+Team');
+        "
+      >
+        <!-- Optional: Add a banner image -->
+        <div class="container">
+          <h1>Meet the Team at Your Barbershop Name</h1>
+          <p>
+            Craftsmen dedicated to style and precision in Kenner, serving New
+            Orleans & Metairie.
+          </p>
+        </div>
+      </section>
+
+      <section class="our-story-section">
+        <div class="container">
+          <h2>Our Story & Philosophy</h2>
+          <p>
+            Founded in [Year], Your Barbershop Name was born out of a passion
+            for timeless grooming and a desire to create a welcoming space for
+            the Kenner community and surrounding areas like Metairie and New
+            Orleans. We believe that a great haircut is more than just a service
+            – it's an experience. Our commitment is to provide exceptional
+            skill, personalized attention, and a comfortable atmosphere where
+            you can relax and leave feeling your absolute best.
+          </p>
+          <p>
+            We specialize in [mention a key specialty, e.g., classic cuts,
+            modern fades, beard grooming] and pride ourselves on staying
+            up-to-date with the latest techniques while honoring traditional
+            barbering values.
+          </p>
+        </div>
+      </section>
+
+      <section class="barber-bios-section">
+        <div class="container">
+          <h2>Our Expert Barbers</h2>
+          <div class="barber-grid">
+            <article
+              class="barber-bio-card"
+              itemscope
+              itemtype="https://schema.org/Person"
+            >
+              <img
+                src="https://via.placeholder.com/300x300.png?text=Barber+1"
+                alt="Portrait of [Barber 1 Name]"
+                itemprop="image"
+                class="barber-photo"
+              />
+              <div class="barber-info">
+                <h3 itemprop="name">[Barber 1 Name]</h3>
+                <p class="barber-title" itemprop="jobTitle">
+                  Master Barber / Owner
+                </p>
+                <p itemprop="description">
+                  With over [X] years of experience, [Barber 1 Name] is renowned
+                  in the New Orleans area for his precision cuts and traditional
+                  hot towel shaves. He's passionate about creating the perfect
+                  look for each client.
+                </p>
+                <p>
+                  <strong>Specialties:</strong> Classic Haircuts, Hot Towel
+                  Shaves, Beard Sculpting
+                </p>
+                <!-- Optional: <a href="[barber1_instagram_link]" target="_blank" aria-label="[Barber 1 Name] on Instagram"><i class="fab fa-instagram"></i></a> -->
+              </div>
+            </article>
+
+            <article
+              class="barber-bio-card"
+              itemscope
+              itemtype="https://schema.org/Person"
+            >
+              <img
+                src="https://via.placeholder.com/300x300.png?text=Barber+2"
+                alt="Portrait of [Barber 2 Name]"
+                itemprop="image"
+                class="barber-photo"
+              />
+              <div class="barber-info">
+                <h3 itemprop="name">[Barber 2 Name]</h3>
+                <p class="barber-title" itemprop="jobTitle">Senior Barber</p>
+                <p itemprop="description">
+                  [Barber 2 Name] brings a modern flair to our Kenner shop,
+                  excelling in contemporary styles, skin fades, and creative
+                  color work. Clients from Metairie and beyond seek her out for
+                  the latest trends.
+                </p>
+                <p>
+                  <strong>Specialties:</strong> Skin Fades, Modern Styles, Hair
+                  Designs
+                </p>
+              </div>
+            </article>
+
+            <!-- Add more <article class="barber-bio-card"> for each barber -->
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <h2>Ready to Meet Your Barber?</h2>
+          <p>
+            Experience the difference at Your Barbershop Name. Book your
+            appointment today!
+          </p>
+          <a href="booking.html" class="cta-button">Book Online</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Same footer as index.html -->
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>Your Barbershop Name</h3>
+            <p>123 Main Street, Kenner, LA 70062</p>
+            <p>Phone: <a href="tel:+15045551234">(504) 555-1234</a></p>
+            <p>
+              Email:
+              <a href="mailto:contact@yourbarbershop.com"
+                >contact@yourbarbershop.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact & Directions</a></li>
+              <li><a href="booking.html">Book Appointment</a></li>
+            </ul>
+          </div>
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a
+              href="https://facebook.com/yourbarbershop"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://instagram.com/yourbarbershop"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://twitter.com/yourbarbershop"
+              target="_blank"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-map">
+          <h3>Find Us in Kenner</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.301188373415!2d-90.2435!3d29.9929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620b707679ce6df%3A0x1234567890abcdef!2sYour+Barbershop+Location+Here!5e0!3m2!1sen!2sus!4v1234567890123"
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map of Your Barbershop Name in Kenner LA"
+          ></iframe>
+          <p class="map-caption">
+            Conveniently located for clients from Kenner, Metairie, and the
+            greater New Orleans area.
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span> Your Barbershop Name. All Rights
+            Reserved. | Serving New Orleans, Kenner, Metairie.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
